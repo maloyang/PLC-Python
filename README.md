@@ -17,8 +17,11 @@
 - 看一下[wiki說明](https://zh.wikipedia.org/wiki/Modbus)
 - package: https://pypi.python.org/pypi/modbus_tk
   - https://github.com/ljean/modbus-tk/
+- 使前先安裝一下套件
+  - pip install serial
+  - pip install modbus_tk
 - example:
-  - DI/DO/AI的存取
+  - DI/DO/AI/AO的存取
   
 ## Python與PLC共舞
 - demo1: 使用modbus控制PLC的relay輸出，點亮家中的照明用電燈
