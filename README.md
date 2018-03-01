@@ -28,9 +28,9 @@
   - 家用110V E27 LED燈泡: ![家用110V E27 LED燈泡](http://www.ikea.com/tw/zh/images/products/ryet-led-deng-pao-e-liu-ming-bai-se__0457392_PE604843_S4.JPG)
 - demo2: 使用modbus取得開關狀態-->常見的有保全使用的磁簧開關
   - ![磁簧開關](https://www.alarms.com.tw/images-2/gif%E6%AA%94/HC-13C-356-329.gif)
-
+  - DI和DO混放，所以要查表才能了解
+  - ![表](/image/fatek_modbus_addr.png)
 - demo3: 讀電錶的資訊
   - 士林電機電表： http://www.seec.com.tw/Content/Goods/GCont.aspx?SiteID=10&MmmID=655575436061073254&CatId=2015120316233269372&MSID=655575454164207353#ad-image-0
   - ![電表](http://www.seec.com.tw/UpFiles/10/Goods_NPics655575436061073254/EG-%E9%9B%BB%E8%A1%A8SPM-8.jpg)
-
 
