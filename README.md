@@ -28,8 +28,8 @@
   - 家用110V E27 LED燈泡:  
   ![家用110V E27 LED燈泡](http://www.ikea.com/tw/zh/images/products/ryet-led-deng-pao-e-liu-ming-bai-se__0457392_PE604843_S4.JPG)
 
-- demo2: 使用modbus取得開關狀態-->常見的有保全使用的磁簧開關
-    - ![磁簧開關]  (https://www.alarms.com.tw/images-2/gif%E6%AA%94/HC-13C-356-329.gif)
+- demo2: 使用modbus取得開關狀態-->常見的有保全使用的磁簧開關  
+    ![磁簧開關](https://www.alarms.com.tw/images-2/gif%E6%AA%94/HC-13C-356-329.gif)
     - DI和DO混放，所以要查表才能了解
     - FATEK說明書的Modbus Table節錄  
     ![PLC的Modbus Table](image/fatek_modbus_addr.png)
