@@ -7,28 +7,20 @@ import modbus_tk.defines as cst
 import modbus_tk.modbus_rtu as modbus_rtu
 
 
-
-__version__ = 'V1.00 2015/09/29'
-
-mbComPort = 'COM6'   # COM3->RS-485
+mbComPort = 'COM7'
 baudrate = 38400
 databit = 8
 parity = 'N'
 stopbit = 1
 mbTimeout = 100 # ms
-ser = None
-sendBuf = None
 
-##############################
-# main start
-##############################
 def main():
 
     # scan_test:
     for baudrate in [9600, 19200, 38400, 115200]:
         for parity in ['N', 'O', 'E']:
             for stopbit in[1, 2]:
-                print('@', baudrate, parity, stopbit)
+                print('scan @', baudrate, parity, stopbit)
                 mb_port = serial.Serial(port=mbComPort, baudrate=baudrate, bytesize=databit, parity=parity, stopbits=stopbit)
                 master = modbus_rtu.RtuMaster(mb_port)
                 master.set_timeout(mbTimeout/1000.0)
