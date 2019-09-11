@@ -40,3 +40,37 @@
 
 ### 會後補充
 * 程式的說明有再增加一個jupyter notebook的說明範例，可以比較清楚的看到執行的結果，有興趣可以參考[這篇](Modbus.ipynb)
+
+### 實作補充
+- 在實際案場你在使用modbus/tcp時，也許會遇到設備回回來的header長度欄位是錯的，但後面帶的pdu資料卻是正確的，這時modbus_tk就沒辨法正常運作，可以參考以下的解法：
+
+- 修改 python資料夾下 `Lib\site-packages\modbus_tk` 中的 `modbus_tcp.py`  (我使用的版本是 '0.5.10')，把 `_recv` 函式改成如下
+```
+    def _recv(self, expected_length=-1):
+        """
+        Receive the response from the slave
+        Do not take expected_length into account because the length of the response is
+        written in the mbap. Used for RTU only
+        """
+        to_be_recv_length = expected_length-2+6 #MB/TCP data length must add 6 byte header, sub 2 byte crc
+        expected_pdu_length = expected_length-2
+        response = to_data('')
+        length = 255
+        while len(response) < to_be_recv_length: #for H5A: length error issue
+            rcv_byte = self._sock.recv(1)
+            if rcv_byte:
+                response += rcv_byte
+                if len(response) == 6:
+                    #to_be_recv_length = struct.unpack(">HHH", response)[2]
+                    #length = to_be_recv_length + 6
+                    if response[5] != expected_pdu_length:
+                        print('length field of header error, fix: %s-->%s' %(response[5], expected_pdu_length))
+                        response = response[:5] + struct.pack("B", expected_pdu_length)
+
+            else:
+                break
+        retval = call_hooks("modbus_tcp.TcpMaster.after_recv", (self, response))
+        if retval is not None:
+            return retval
+        return response
+```
