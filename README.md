@@ -26,7 +26,7 @@
 ## Python與PLC共舞
 - demo1: 使用modbus控制PLC的relay輸出，點亮家中的照明用電燈
   - 家用110V E27 LED燈泡:  
-  ![家用110V E27 LED燈泡](http://www.ikea.com/tw/zh/images/products/ryet-led-deng-pao-e-liu-ming-bai-se__0457392_PE604843_S4.JPG)
+  ![家用110V E27 LED燈泡](image/e27.jpg)
 
 - demo2: 使用modbus取得開關狀態-->常見的有保全使用的磁簧開關  
     ![磁簧開關](image/磁簧開關.jpg)
