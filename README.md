@@ -74,3 +74,8 @@
             return retval
         return response
 ```
+
+----
+## Exception code 補充
+
+- [link](https://product-help.schneider-electric.com/ED/ES_Power/PP-HJL_Modbus_Guide/EDMS/0611IB1302/0611IB13xx/NSX_MB_Modbus_Protocol/NSX_MB_Modbus_Protocol-5.htm)
