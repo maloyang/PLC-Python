@@ -2,7 +2,7 @@
 
 ## PLC
 
-![PLC](http://www.fatek.com/tw/data/goods/201212/1354859791k63z11.jpg)
+![PLC](image/fatek.jpg)
 - Programmable Logic Controller，簡稱PLC
 - 先來看wiki的 [說明](https://zh.wikipedia.org/wiki/%E5%8F%AF%E7%BC%96%E7%A8%8B%E9%80%BB%E8%BE%91%E6%8E%A7%E5%88%B6%E5%99%A8)
 - 今天 demo要用的PLC為[FATEK PLC](http://www.fatek.com/tw/prod.php?act=view&no=1)
@@ -79,3 +79,5 @@
 ## Exception code 補充
 
 - [link](https://product-help.schneider-electric.com/ED/ES_Power/PP-HJL_Modbus_Guide/EDMS/0611IB1302/0611IB13xx/NSX_MB_Modbus_Protocol/NSX_MB_Modbus_Protocol-5.htm)
+
+![pic](image/mb_exception.jpg)
